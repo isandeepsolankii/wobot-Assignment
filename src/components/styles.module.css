@@ -1,0 +1,222 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+/* Filters Styling */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.filters .dropdown select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.filters .search-box {
+  display: flex;
+  align-items: center;
+}
+
+.filters .search-box input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  width: 200px;
+}
+
+.filters .search-box button {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.filters .search-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styling */
+.camera_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  color: #545454;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.camera_table th,
+.camera_table td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tableHeading th {
+  background-color: #f5f5f5;
+  font-size: 14px;
+  color: #7e7e7e;
+}
+
+.camera_table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.camera_table .health {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.camera_table .health.good {
+  background-color: green;
+}
+
+.camera_table .status {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.status_active {
+  background-color: #dff0d8;
+  color: #029262;
+}
+
+.status_inactive {
+  background-color: #f0f0f0;
+  color: #545454;
+}
+
+.status_dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+/* Online Status */
+.online {
+  background-color: #029262;
+}
+
+/* Offline Status */
+.offline {
+  background-color: #dc3545;
+}
+
+.logoContainer {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 36px;
+}
+
+/* Wrapper for the entire health section */
+.healthWrapper {
+  display: flex;
+  gap: 16px; /* Adjust spacing between items */
+  align-items: center; /* Align items vertically */
+}
+
+/* Individual health item (icon + progress circle) */
+.healthItem {
+  display: flex;
+  flex-direction: row; /* Icon on top, circle below */
+  align-items: center;
+  gap: 4px; /* Space between the icon and circle */
+}
+
+/* Circle Module */
+.circle_progress {
+  position: relative;
+  width: 20px; /* Adjust size */
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green_progress {
+  background: conic-gradient(green 0% 75%, #e0e8fc 75% 100%);
+}
+
+.orange_progress {
+  background: conic-gradient(orange 0% 75%, #e0e8fc 75% 100%);
+}
+
+/* SVG Icon Styling */
+.icon {
+  gap: 4px;
+  object-fit: contain;
+}
+
+/* Center the text within the progress circle */
+.progress_text {
+  position: absolute;
+  font-size: 10px; /* Adjust font size */
+  font-weight: bold;
+  color: #343434; /* Text color */
+  z-index: 1; /* Ensure text appears above the progress circle */
+}
+
+/* Inner white circle */
+.circle_progress::before {
+  content: "";
+  position: absolute;
+  width: 80%; /* Inner circle size */
+  height: 80%;
+  border-radius: 50%;
+  background: white; /* Inner circle background */
+  z-index: 0; /* Ensure it's below the text */
+}
