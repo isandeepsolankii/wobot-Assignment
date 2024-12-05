@@ -1,12 +1,13 @@
 .shiftRight {
   position: relative;
-  left: 70px;
+  left: 60px;
 }
+
 .container {
   display: flex;
   gap: 20px; /* Space between the dropdowns */
-  margin-top: 20px;
   font-family: Arial, sans-serif;
+  padding: 4px 8px;
 }
 
 /* Wrapper for dropdown */
@@ -35,6 +36,8 @@
   align-items: center;
   gap: 5px;
   color: #888;
+  width: 198px;
+  height: 32px;
 }
 
 .icon {
